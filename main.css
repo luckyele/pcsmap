@@ -36,6 +36,7 @@ button{
 }
 
 #mapsample li {
+	font-size: 14px;
 	float: left;
 	list-style: none;
 	width: 3em;
