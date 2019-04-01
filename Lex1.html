@@ -14,8 +14,10 @@
  
 	<body>  
 		<div id="title">国家公共文化服务体系示范区总览</div>
-		<div id="container"></div> 
-
+		<div id="con">
+			<div id="container"></div> 
+			<div id="info"></div>
+		</div>
 		<div id="mapsample">
 			<li>第一批</li><div id="c1"></div>
 			<li>第二批</li><div id="c2"></div>
@@ -26,18 +28,7 @@
 			<button onclick="displayArea()">显示</button>  
 			<button onclick="removeMarker()">取消显示</button>  
 		</div>
-		
-
 	
-
-		<!-- <div id="selectArea">
-			<input id="select_all" type="checkbox" value="0" onclick="onClickSelectAll()" /><label>全选</label>
-			<input id="first" type="checkbox" value="0" /><label>首批</label>
-			<input id="second" type="checkbox" value="0" /><label>第二批</label>
-			<input id="third" type="checkbox" value="0" /><label>第三批</label>
-			<input id="forth" type="checkbox" value="0" /><label>第四批</label>
-		</div> -->
-
 		<script type="text/javascript">
 
 			var map = new BMap.Map("container");
@@ -107,14 +98,8 @@
 			            var ply = new BMap.Polygon(rs.boundaries[i], 
 			            	{strokeWeight:2, fillColor:color, strokeColor:color}); 
 			            map.addOverlay(ply);
-//			            (function() {
-            				ply.addEventListener("click", function() { 
-            					alert(name);
-            					
-            				});
-  //      		 		})();  
-			            //map.setViewport(ply.getPath());
-			        }
+           				ply.addEventListener("click", function(){alert(name);});
+  			        }
 			        
 			    });
 			}
@@ -126,55 +111,7 @@
 				}
 			}
 
-			/*function checkStatus(){
-			    var FLAG_MASS = 1
-			    var FLAG_LIB = 2
-			    var FLAG_MU = 4
-			    var FLAG_ST = 8
-			    var flag = 0
-			    var v1 = document.getElementById("first");
-			    var v2 = document.getElementById("second");
-			    var v3 = document.getElementById("third");
-			    var v4 = document.getElementById("forth");
-
-			    if (v1.checked)
-			        flag |= FLAG_MASS;
-			    if (v2.checked)
-			        flag |= FLAG_LIB;
-			    if (v3.checked)
-			        flag |= FLAG_MU;
-			    if (v4.checked)
-			        flag |= FLAG_ST;
-			    console.log(flag);
-			    return flag;
-			}
-
-			function onClickSelectAll(){
-			    var v1 = document.getElementById("first");
-			    var v2 = document.getElementById("second");
-			    var v3 = document.getElementById("third");
-			    var v4 = document.getElementById("forth");
-			    if (document.getElementById("select_all").checked == true) {
-			        v1.checked = true;
-			        v2.checked = true;
-			        v3.checked = true;
-			        v4.checked = true;
-			    }
-			    else {
-			        v1.checked = false;
-			        v2.checked = false;
-			        v3.checked = false;
-			        v4.checked = false;
-			    }
-			}
-*/
-
-/*			function displayFacilities(){
-				var name = $("#districtName").val();
-				getBoundary(name);
-///				drawMarker();
-			}
-*/
+	
 	    </script>  
 				
 	</body>

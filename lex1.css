@@ -6,15 +6,19 @@ body{
 	padding:0px;
 }
 
-#title{margin:20px;font: 1.5em bold;text-align: center;}
+#title{width:70%;margin:20px;font: 1.5em bold;text-align: center;}
 
-#container{margin:5px 5px;height:80%;}  
+#con{width:100%;height:80%;}  
+
+#container{float:left;width:70%;margin:5px 5px;height:100%;border: 1px solid gray;}  
+#info{margin:5px 5px;width:25%;height:100%;float:left;background-color: gray;}
 
 #buttons {
 	margin: 0 5px;
 	text-align: center;
-	width: 300px;
-	float:right;		
+	width:300px;
+	float:left;		
+	margin-left: 30px;
 }
 
 button{
