@@ -14,11 +14,9 @@ body{
 #info{margin:5px 5px;width:25%;height:100%;float:left;background-color: gray;}
 
 #buttons {
-	margin: 0 5px;
 	text-align: center;
 	width:300px;
 	float:left;		
-	margin-left: 30px;
 }
 
 button{
