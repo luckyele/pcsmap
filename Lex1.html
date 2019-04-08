@@ -93,16 +93,19 @@
 
 			function getBoundary(name, color){       
 			    var bdary = new BMap.Boundary();
+				 			    
 			    bdary.get(name, function(rs){       
 			        var count = rs.boundaries.length; 
+					  $("#info").append(name);
 			        for(var i = 0; i < count; i++){
 			            var ply = new BMap.Polygon(rs.boundaries[i], 
-			            	{strokeWeight:2, fillColor:color, strokeColor:color}); 
+			            	{strokeWeight:2, fillColor:color, strokeColor:color}); 							
 			            map.addOverlay(ply);
-           				ply.addEventListener("click", function(){alert(name);});
-  			        }
-			        
-			    });
+           				ply.addEventListener("click", function(){
+								alert(name);
+							});
+  			        }			        
+			    });							    
 			}
 
 			function removeMarker(){
@@ -110,6 +113,7 @@
 				for(var i = 0; i < allMarkers.length; i++) {
 					map.removeOverlay(allMarkers[i]);
 				}
+				$("#info").empty();				
 			}
 
 	
